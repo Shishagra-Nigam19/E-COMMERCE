@@ -1,0 +1,26 @@
+name,price,description,category,stock,imageUrl
+MacBook Pro 16,2499,Powerful laptop with M3 chip and 16GB RAM,Electronics,15,https://images.unsplash.com/photo-1517336714731-489689fd1ca8
+iPhone 15 Pro,1199,Latest iPhone with A17 Pro chip and titanium design,Electronics,25,https://images.unsplash.com/photo-1592286927505-2fd0c6a3d27e
+Samsung Galaxy S24,899,Flagship Android phone with AI features,Electronics,20,https://images.unsplash.com/photo-1610945415295-d9bbf067e59c
+Sony WH-1000XM5,399,Premium noise-cancelling headphones,Electronics,30,https://images.unsplash.com/photo-1505740420928-5e560c06d30e
+iPad Air,599,Versatile tablet with M1 chip,Electronics,18,https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0
+Nike Air Max,120,Comfortable running shoes with air cushioning,Footwear,50,https://images.unsplash.com/photo-1542291026-7eec264c27ff
+Adidas Ultraboost,180,High-performance running shoes,Footwear,40,https://images.unsplash.com/photo-1608231387042-66d1773070a5
+Levi's 501 Jeans,89,Classic straight-fit denim jeans,Clothing,60,https://images.unsplash.com/photo-1542272604-787c3835535d
+North Face Jacket,299,Waterproof outdoor jacket,Clothing,25,https://images.unsplash.com/photo-1551028719-00167b16eac5
+Ray-Ban Aviators,154,Classic aviator sunglasses,Accessories,45,https://images.unsplash.com/photo-1511499767150-a48a237f0083
+Fossil Smartwatch,249,Stylish hybrid smartwatch,Accessories,35,https://images.unsplash.com/photo-1523275335684-37898b6baf30
+Canon EOS R6,2499,Professional mirrorless camera,Electronics,10,https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f
+Sony PlayStation 5,499,Next-gen gaming console,Electronics,12,https://images.unsplash.com/photo-1606144042614-b2417e99c4e3
+Nintendo Switch OLED,349,Portable gaming console with vibrant display,Electronics,22,https://images.unsplash.com/photo-1578303512597-81e6cc155b3e
+KitchenAid Stand Mixer,429,Professional 5-quart stand mixer,Home & Kitchen,20,https://images.unsplash.com/photo-1578645510447-e20b4311e3ce
+Dyson V15 Vacuum,649,Cordless vacuum with laser detection,Home & Kitchen,15,https://images.unsplash.com/photo-1558317374-067fb5f30001
+Instant Pot Duo,99,7-in-1 programmable pressure cooker,Home & Kitchen,40,https://images.unsplash.com/photo-1585515320310-259814833e62
+Yoga Mat Premium,45,Eco-friendly non-slip yoga mat,Sports,55,https://images.unsplash.com/photo-1601925260368-ae2f83cf8b7f
+Resistance Bands Set,29,Set of 5 resistance bands for home workout,Sports,70,https://images.unsplash.com/photo-1598289431512-b97b0917affc
+Dumbbells Set,159,Adjustable dumbbell set 5-52.5 lbs,Sports,25,https://images.unsplash.com/photo-1571902943202-507ec2618e8f
+Kindle Paperwhite,139,Waterproof e-reader with adjustable light,Electronics,30,https://images.unsplash.com/photo-1592496431122-2349e0fbc666
+Bose SoundLink Speaker,129,Portable Bluetooth speaker,Electronics,35,https://images.unsplash.com/photo-1608043152269-423dbba4e7e1
+Coffee Maker Breville,299,Automatic espresso machine,Home & Kitchen,18,https://images.unsplash.com/photo-1517668808822-9ebb02f2a0e6
+Office Chair Ergonomic,349,Adjustable ergonomic office chair,Furniture,20,https://images.unsplash.com/photo-1580480055273-228ff5388ef8
+Standing Desk,599,Electric height adjustable standing desk,Furniture,12,https://images.unsplash.com/photo-1595515106969-1ce29566ff1c
