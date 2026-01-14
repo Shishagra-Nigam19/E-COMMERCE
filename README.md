@@ -8,6 +8,7 @@ A full-stack e-commerce application built with the MERN stack (MongoDB, Express.
 
 - 🚀 **Frontend (Live)**: [https://frontend-48ec0whzt-shishagra-nigam19s-projects.vercel.app](https://frontend-48ec0whzt-shishagra-nigam19s-projects.vercel.app)
 - 🔧 **Backend API**: [https://backend-six-nu-58.vercel.app](https://backend-six-nu-58.vercel.app)
+- 🎥 **Video Demo**: [Watch Project Walkthrough](https://drive.google.com/file/d/1FuCHWyhfhvRkTfRN55QVk_kBo4Om1bxt/view?usp=sharing)
 
 > **Note**: The application is currently deployed. The frontend loads successfully, and backend API is being configured for production use.
 
