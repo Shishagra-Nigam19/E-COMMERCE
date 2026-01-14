@@ -113,10 +113,34 @@ Visit your frontend URL and test:
 
 ## 🆘 Need Help?
 
-- Check the [Full Deployment Guide](../brain/6bdc3ec4-d012-4964-8e31-3671620ab701/deployment_guide.md)
-- View [Vercel Documentation](https://vercel.com/docs)
 - Check deployment logs: `vercel logs`
+- View [Vercel Documentation](https://vercel.com/docs)
+
+## 🔧 Troubleshooting
+
+### Common Issues
+
+1. **500 Internal Server Error on Backend**
+   - Check environment variables in Vercel Dashboard
+   - Verify MongoDB connection string
+   - Check deployment logs
+
+2. **Frontend Can't Connect to Backend**
+   - Ensure `REACT_APP_API_URL` is set correctly
+   - Backend URL should end with `/api`
+   - Redeploy frontend after updating environment variables
+
+3. **CORS Errors**
+   - Verify `NODE_ENV=production` is set in backend
+   - Check CORS configuration in `server.js`
+
+4. **React Router 404 Errors**
+   - Verify `vercel.json` rewrites configuration
+   - Clear Vercel cache and redeploy
+
+For detailed troubleshooting, see the complete [Deployment Fix Guide](../brain/eb2fd159-4215-4fc7-9e2d-fb3771e07650/deployment_fix_guide.md)
 
 ---
 
 **Ready to deploy? Let's go! 🚀**
+

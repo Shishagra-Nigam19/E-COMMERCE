@@ -10,6 +10,14 @@ A full-stack e-commerce application built with the MERN stack (MongoDB, Express.
 - 🔧 **Backend API**: [https://backend-six-nu-58.vercel.app](https://backend-six-nu-58.vercel.app)
 
 > **Note**: The application is currently deployed. The frontend loads successfully, and backend API is being configured for production use.
+
+## 💻 Local Developement
+
+Running locally? Access the application here:
+
+- 🏠 **Frontend (Local)**: [http://localhost:3000](http://localhost:3000)
+- ⚙️ **Backend API (Local)**: [http://localhost:5000](http://localhost:5000)
+
 ## ✨ Features
 
 ### User Features
