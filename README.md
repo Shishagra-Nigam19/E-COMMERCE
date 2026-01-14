@@ -20,6 +20,16 @@ Running locally? Access the application here:
 
 ## ✨ Features
 
+## 📸 Screenshots
+
+| Home Page | Product Detail |
+|-----------|----------------|
+| ![Home Page](screenshots/home.png) | ![Product Detail](screenshots/product.png) |
+
+| Shopping Cart |
+|---------------|
+| ![Shopping Cart](screenshots/cart.png) |
+
 ### User Features
 - 🔐 **User Authentication**: Secure registration and login with JWT
 - 🛍️ **Product Browsing**: Browse and search products with detailed views
