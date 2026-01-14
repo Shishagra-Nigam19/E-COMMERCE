@@ -22,17 +22,21 @@ Running locally? Access the application here:
 
 ## 📸 Screenshots
 
-| Home Page | Featured Products |
+| Home Page (Dark Mode) | Electronics Category |
 |-----------|-------------------|
-| ![Home Page](screenshots/home_hero.png) | ![Featured Products](screenshots/products_grid.png) |
+| ![Home Page](screenshots/home_dark.png) | ![Electronics](screenshots/products_electronics.png) |
 
-| Shopping Cart | Checkout |
+| Design & Fashion | Shopping Cart (Dark) |
 |---------------|----------|
-| ![Shopping Cart](screenshots/cart_page.png) | ![Checkout](screenshots/checkout.png) |
+| ![Fashion](screenshots/products_fashion.png) | ![Shopping Cart](screenshots/cart_dark.png) |
 
-| User Dashboard |
+| Login Page | Register Page |
+|------------|---------------|
+| ![Login](screenshots/login.png) | ![Register](screenshots/register.png) |
+
+| Detail & Checkout |
 |----------------|
-| ![Dashboard](screenshots/dashboard.png) |
+| ![Checkout](screenshots/checkout_dark.png) |
 
 ### User Features
 - 🔐 **User Authentication**: Secure registration and login with JWT
