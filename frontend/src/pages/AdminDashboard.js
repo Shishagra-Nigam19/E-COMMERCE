@@ -8,7 +8,6 @@ const AdminDashboard = () => {
     const [orders, setOrders] = useState([]);
     const [activeTab, setActiveTab] = useState('products');
     const [newProduct, setNewProduct] = useState({ name: '', price: '', category: '', stock: '', description: '', imageUrl: '' });
-    const [editingProduct, setEditingProduct] = useState(null);
 
     useEffect(() => {
         fetchProducts();

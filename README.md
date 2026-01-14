@@ -2,6 +2,14 @@
 
 A full-stack e-commerce application built with the MERN stack (MongoDB, Express.js, React, Node.js), featuring user authentication, product management, shopping cart functionality, payment integration, and AI-powered chat support.
 
+## 🌐 Live Demo
+
+**Experience the live application deployed on Vercel:**
+
+- 🚀 **Frontend (Live)**: [https://frontend-48ec0whzt-shishagra-nigam19s-projects.vercel.app](https://frontend-48ec0whzt-shishagra-nigam19s-projects.vercel.app)
+- 🔧 **Backend API**: [https://backend-six-nu-58.vercel.app](https://backend-six-nu-58.vercel.app)
+
+> **Note**: The application is currently deployed. The frontend loads successfully, and backend API is being configured for production use.
 ## ✨ Features
 
 ### User Features
@@ -121,6 +129,54 @@ E-COMMERCE/
 4. **Access the application**
    - Frontend: http://localhost:3000
    - Backend API: http://localhost:5000
+
+## 🌐 Deployment
+
+Ready to deploy your application to production? We support deployment to **Vercel** for both frontend and backend.
+
+### Quick Deploy
+
+```bash
+# Install Vercel CLI
+npm install -g vercel
+
+# Login to Vercel
+vercel login
+
+# Deploy backend
+cd backend
+vercel --prod
+
+# Deploy frontend
+cd ../frontend
+vercel --prod
+```
+
+### Automated Deployment
+
+Use our deployment scripts:
+
+```powershell
+# Deploy backend
+.\deploy-backend.ps1
+
+# Deploy frontend  
+.\deploy-frontend.ps1
+```
+
+### 📚 Deployment Documentation
+
+For complete deployment instructions, troubleshooting, and best practices:
+- **[Quick Start: DEPLOYMENT.md](DEPLOYMENT.md)** - Quick deployment guide
+- **[Full Guide](DEPLOYMENT.md)** - Comprehensive deployment documentation
+
+### Deploy via GitHub
+
+1. Push your code to GitHub
+2. Connect to [Vercel Dashboard](https://vercel.com/dashboard)
+3. Import repository and configure
+4. Automatic deployments on every push!
+
 
 ## 📝 API Endpoints
 
