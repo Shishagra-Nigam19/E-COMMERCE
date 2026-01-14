@@ -22,13 +22,17 @@ Running locally? Access the application here:
 
 ## 📸 Screenshots
 
-| Home Page | Product Detail |
-|-----------|----------------|
-| ![Home Page](screenshots/home.png) | ![Product Detail](screenshots/product.png) |
+| Home Page | Featured Products |
+|-----------|-------------------|
+| ![Home Page](screenshots/home_hero.png) | ![Featured Products](screenshots/products_grid.png) |
 
-| Shopping Cart |
-|---------------|
-| ![Shopping Cart](screenshots/cart.png) |
+| Shopping Cart | Checkout |
+|---------------|----------|
+| ![Shopping Cart](screenshots/cart_page.png) | ![Checkout](screenshots/checkout.png) |
+
+| User Dashboard |
+|----------------|
+| ![Dashboard](screenshots/dashboard.png) |
 
 ### User Features
 - 🔐 **User Authentication**: Secure registration and login with JWT
