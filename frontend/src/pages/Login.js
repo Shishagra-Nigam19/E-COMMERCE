@@ -1,29 +1,41 @@
-import React, { useState, useContext } from 'react';
-import { AuthContext } from '../context/AuthContext';
-import { Link, useNavigate } from 'react-router-dom';
+import React, { useState, useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { useNavigate, Link, useLocation } from 'react-router-dom';
+import { useLoginMutation } from '../slices/authApiSlice';
+import { setCredentials } from '../slices/authSlice';
+import Loader from '../components/Loader';
+import Message from '../components/Message';
 import './Login.css';
 
 const Login = () => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
-    const [error, setError] = useState('');
-    const [loading, setLoading] = useState(false);
-    const { login } = useContext(AuthContext);
+
+    const dispatch = useDispatch();
     const navigate = useNavigate();
+    const location = useLocation();
+
+    const [login, { isLoading }] = useLoginMutation();
+
+    const { userInfo } = useSelector((state) => state.auth);
+
+    const redirect = location.search ? location.search.split('=')[1] : '/';
+
+    useEffect(() => {
+        if (userInfo) {
+            navigate(redirect);
+        }
+    }, [navigate, redirect, userInfo]);
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        setError('');
-        setLoading(true);
 
         try {
-            await login(email, password);
-            navigate('/');
-        } catch (error) {
-            console.error('Login error:', error);
-            setError(error.response?.data?.message || 'Login failed. Please check your credentials.');
-        } finally {
-            setLoading(false);
+            const res = await login({ email, password }).unwrap();
+            dispatch(setCredentials({ ...res }));
+            navigate(redirect);
+        } catch (err) {
+            console.error('Login error:', err);
         }
     };
 
@@ -31,7 +43,7 @@ const Login = () => {
         <div className="login-container">
             <div className="login-form">
                 <h2>Login</h2>
-                {error && <div className="error-message">{error}</div>}
+                {isLoading && <Loader />}
                 <form onSubmit={handleSubmit}>
                     <input
                         type="email"
@@ -39,7 +51,7 @@ const Login = () => {
                         value={email}
                         onChange={(e) => setEmail(e.target.value)}
                         required
-                        disabled={loading}
+                        disabled={isLoading}
                     />
                     <input
                         type="password"
@@ -47,10 +59,10 @@ const Login = () => {
                         value={password}
                         onChange={(e) => setPassword(e.target.value)}
                         required
-                        disabled={loading}
+                        disabled={isLoading}
                     />
-                    <button type="submit" disabled={loading}>
-                        {loading ? 'Logging in...' : 'Login'}
+                    <button type="submit" disabled={isLoading}>
+                        {isLoading ? 'Logging in...' : 'Login'}
                     </button>
                     <p>Don't have an account? <Link to="/register">Register</Link></p>
                 </form>

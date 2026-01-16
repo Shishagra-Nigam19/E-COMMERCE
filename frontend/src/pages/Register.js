@@ -1,30 +1,38 @@
-import React, { useState, useContext } from 'react';
-import { AuthContext } from '../context/AuthContext';
-import { Link, useNavigate } from 'react-router-dom';
-import './Login.css'; // Reusing login styles
+import React, { useState, useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { useNavigate, Link } from 'react-router-dom';
+import { useRegisterMutation } from '../slices/authApiSlice';
+import { setCredentials } from '../slices/authSlice';
+import Loader from '../components/Loader';
+import './Login.css';
 
 const Register = () => {
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
-    const [error, setError] = useState('');
-    const [loading, setLoading] = useState(false);
-    const { register } = useContext(AuthContext);
+
+    const dispatch = useDispatch();
     const navigate = useNavigate();
+
+    const [register, { isLoading }] = useRegisterMutation();
+
+    const { userInfo } = useSelector((state) => state.auth);
+
+    useEffect(() => {
+        if (userInfo) {
+            navigate('/');
+        }
+    }, [navigate, userInfo]);
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        setError('');
-        setLoading(true);
 
         try {
-            await register(name, email, password);
+            const res = await register({ name, email, password }).unwrap();
+            dispatch(setCredentials({ ...res }));
             navigate('/');
-        } catch (error) {
-            console.error('Registration error:', error);
-            setError(error.response?.data?.message || 'Registration failed. Please try again.');
-        } finally {
-            setLoading(false);
+        } catch (err) {
+            console.error('Registration error:', err);
         }
     };
 
@@ -32,7 +40,7 @@ const Register = () => {
         <div className="login-container">
             <div className="login-form">
                 <h2>Register</h2>
-                {error && <div className="error-message">{error}</div>}
+                {isLoading && <Loader />}
                 <form onSubmit={handleSubmit}>
                     <input
                         type="text"
@@ -40,7 +48,7 @@ const Register = () => {
                         value={name}
                         onChange={(e) => setName(e.target.value)}
                         required
-                        disabled={loading}
+                        disabled={isLoading}
                     />
                     <input
                         type="email"
@@ -48,7 +56,7 @@ const Register = () => {
                         value={email}
                         onChange={(e) => setEmail(e.target.value)}
                         required
-                        disabled={loading}
+                        disabled={isLoading}
                     />
                     <input
                         type="password"
@@ -56,10 +64,10 @@ const Register = () => {
                         value={password}
                         onChange={(e) => setPassword(e.target.value)}
                         required
-                        disabled={loading}
+                        disabled={isLoading}
                     />
-                    <button type="submit" disabled={loading}>
-                        {loading ? 'Creating account...' : 'Register'}
+                    <button type="submit" disabled={isLoading}>
+                        {isLoading ? 'Creating account...' : 'Register'}
                     </button>
                     <p>Already have an account? <Link to="/login">Login</Link></p>
                 </form>

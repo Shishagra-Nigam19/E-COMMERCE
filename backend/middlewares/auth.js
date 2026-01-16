@@ -21,7 +21,7 @@ exports.auth = async (req, res, next) => {
 };
 
 exports.admin = (req, res, next) => {
-    if (req.user && req.user.role === "admin") {
+    if (req.user && req.user.isAdmin) {
         next();
     } else {
         res.status(403).json({ message: "Not authorized as admin" });

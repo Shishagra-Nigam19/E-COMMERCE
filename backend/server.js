@@ -1,6 +1,7 @@
 const express = require("express");
 const mongoose = require("mongoose");
 const cors = require("cors");
+const cookieParser = require("cookie-parser");
 require("dotenv").config();
 
 const app = express();
@@ -13,6 +14,7 @@ app.use(cors({
     credentials: true
 }));
 app.use(express.json());
+app.use(cookieParser());
 
 // MongoDB Connection
 mongoose
@@ -34,6 +36,11 @@ app.use("/api/payment", require("./routes/paymentRoutes"));
 app.get("/", (req, res) => {
     res.json({ message: "E-Commerce API is running" });
 });
+
+// Error Handling Middleware (must be after routes)
+const { notFound, errorHandler } = require("./middlewares/errorMiddleware");
+app.use(notFound);
+app.use(errorHandler);
 
 // Start server
 const PORT = process.env.PORT || 5000;
