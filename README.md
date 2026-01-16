@@ -47,6 +47,39 @@ Running locally? Access the application here:
 - 📊 **Order History**: View past orders and order status
 - 💬 **AI Chat Support**: Get product recommendations and support via OpenAI integration
 
+### Premium UI Features ✨
+
+#### **Dark Theme with Gradient Design**
+- 🎨 **Animated Gradient Backgrounds**: Dynamic shifting gradients throughout the app for a modern, premium feel
+- 🌙 **Dark Mode Aesthetic**: Eye-friendly dark theme with carefully curated color palette
+- ✨ **Glassmorphism Effects**: Frosted glass effects on cards and containers with backdrop blur
+- 🎯 **Consistent Design System**: Unified color scheme and styling across all pages
+
+#### **Interactive Button Styling**
+- 🌈 **Multi-Color Gradients**: Premium buttons with cyan → indigo → purple gradients
+- ✨ **Shimmer Animation**: Light sweep effect on hover for enhanced interactivity
+- 💫 **Glow Effects**: Dynamic shadow and glow animations on buttons
+- 🎪 **Quick View Enhancement**: Product quick-view buttons with matching gradient and scale animations
+
+#### **Product Display Enhancements**
+- 🖼️ **Equal Aspect Ratios**: All product images display in perfect 1:1 aspect ratio containers
+- 📐 **Object-Fit Optimization**: Images use `contain` to ensure full visibility without cropping
+- 🎭 **Hover Animations**: Smooth scale and glow effects on product cards
+- 🔄 **Consistent Layout**: Uniform product card sizing across sliders and grids
+
+#### **Checkout Page Design**
+- 🎨 **Animated Background Gradient**: 15-second smooth gradient animation
+- 💎 **Premium Form Inputs**: Dark-themed inputs with cyan borders and focus glow
+- ✨ **Shimmer Top Accent**: Animated accent line with gradient shimmer effect
+- 🎯 **Payment Button**: Multi-gradient button with enhanced hover effects
+
+#### **Technical Highlights**
+- 🚀 **CSS Custom Properties**: Extensive use of CSS variables for maintainability
+- 🎭 **Advanced Animations**: Cubic-bezier easing for smooth, professional transitions
+- 📱 **Responsive Design**: Mobile-first approach with breakpoints for all devices
+- ⚡ **Performance Optimized**: Hardware-accelerated CSS animations
+
+
 ### Admin Features
 - 📦 **Product Management**: Add, edit, and delete products
 - 📋 **Bulk Upload**: Import products via CSV/Excel files
@@ -239,6 +272,41 @@ Run backend tests:
 cd backend
 npm test
 ```
+
+## ⚙️ Configuration Tips
+
+### Updating OpenAI API Key (Chatbot)
+
+If you need to update the chatbot's OpenAI API key:
+
+1. **Update the `.env` file in the backend directory:**
+   ```env
+   OPENAI_API_KEY=your_new_api_key_here
+   ```
+
+2. **Restart the backend server** to load the new API key:
+   ```bash
+   # If using npm run dev (with nodemon), stop with Ctrl+C and restart
+   npm run dev
+   
+   # Or if using npm start
+   npm start
+   ```
+
+3. **Verify the chatbot is working** by testing the AI chat feature in the application.
+
+### Server Management
+
+**Backend Server:**
+- Development mode (auto-reload): `npm run dev`
+- Production mode: `npm start`
+- Port: 5000 (configurable in `.env`)
+
+**Frontend Server:**
+- Development mode: `npm start`
+- Port: 3000
+- Automatically proxies API requests to backend
+
 
 ## 📦 Bulk Product Upload
 
